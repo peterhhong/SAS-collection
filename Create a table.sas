@@ -8,7 +8,7 @@ data mydata;
 	East Q2 150
 	West Q1 200
 	West Q2 250
-	;
+	; /* note that this ';' has to be in a separate line */
 run;
 
 /*The data called `mydata` is now viewable 
@@ -16,6 +16,10 @@ in explorer libraries-work-mydata*/
 
 /*or to print out the data using the following statment*/
 proc print data = mydata; 
+run;
+
+/* you can hide the observation number by using noobs command  */
+proc print data = mydata noobs;
 run;
 
 /*use var statement to print out selected variables*/
