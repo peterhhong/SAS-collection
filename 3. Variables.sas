@@ -46,4 +46,13 @@ data mydata; set mydata;
 	sales_num = input(sales_char, 8.);
 run;
 
+proc contents data = mydata varnum;
+run;
+
+*Another simplified easy conversion;
+data mydata; set mydata;
+	sales_num_0 = sales_char + 0; 
+	*simply add a 0, and non-numeric text/characters will be converted to . missing;
+run;
+
 	 
